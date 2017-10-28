@@ -16,12 +16,12 @@ app.use((req,res,next)=>{
   next();
 });
 
-app.use((req,res,next)=>{
+/*app.use((req,res,next)=>{
   res.render('maintenance.hbs',{
     pageTitle:'maintenance Page',
     welcomeMessage:'Welcome to home page'
   });
-});
+});*/
 
 app.use(express.static(__dirname+'/public'));
 
@@ -46,6 +46,13 @@ app.get('/about',(req,res)=>{
   res.render('about.hbs',{
     pageTitle:'ABout Pae',
     welcomeMessage:'Welcome to about page'
+  });
+});
+
+app.get('/projects',(req,res)=>{
+  res.render('projects.hbs',{
+    pageTitle:'Project Page',
+    welcomeMessage:'Welcome to Project page'
   });
 });
 
